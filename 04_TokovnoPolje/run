@@ -1,0 +1,9 @@
+for f in *.gpt; do
+ echo "risem $f..."
+ gnuplot -p $f
+done
+
+for i in {1..3}; do
+ echo "racunam model za i=$i:"
+ echo "rhomodels($i)" | octave -q
+done

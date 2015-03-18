@@ -1,0 +1,3 @@
+gnuplot -p z_upor.gpt
+gnuplot -p w_upor.gpt
+

@@ -1,0 +1,2 @@
+fn='naloga.dat';
+echo "VV=csolve('$fn');VV,VV=[VV;0];VV=VV-VV(3),VV=rats(VV)" | octave -q

@@ -1,0 +1,45 @@
+reset
+set grid
+set size ratio 0.75
+unset key #left at graph 0,1 spacing 1.5
+set samples 1000 
+T0=20;
+r0=2.44;
+set xrange [0:25]
+set yrange [0:2]
+set x2range [20:(1+25)*T0]
+set y2range [r0:(1+2)*r0]
+set format y "%.1f"
+set format y2 "%.1f"
+
+set xlabel "$x$" offset 0,-1
+set x2label "$T~[^\\circ$C]" offset 0,0.5 
+set ylabel "$y(x)$" offset -1.5,0
+set y2label "$\\rho(T)~[\\upmu\\Omega\\,\\mathrm{m}]$" offset 2,0 
+
+set xtics nomirror offset 0,-0.2
+set ytics nomirror
+set x2tics
+set y2tics
+
+set style fill solid
+set object 1 circle at 3.295000,0.065574 size 0.3 front fc rgb "black"
+set object 2 circle at 9.175000,0.290984 size 0.3 front fc rgb "black"
+set object 3 circle at 20.500000,1.348361 size 0.3 front fc rgb "black"
+set object 4 circle at 0,0 size 0.3 front fc rgb "black"
+
+a1=  1.3281e-02; b1=  2.0092e-03;
+a2=  4.1219e-03; b2=  3.0074e-03;
+a3=  1.1116e-02; b3=  2.6662e-03;
+
+
+y1(x)=a1*x+b1*x**2
+y2(x)=a2*x+b2*x**2
+y3(x)=a3*x+b3*x**2
+
+#set term tikz mono 
+#set output "rho2.tikz"
+
+plot y1(x) title "$y(x)=a_{12}\\,x+b_{12}\\,x^2$" w l lw 2, \
+y2(x) title "$y(x)=a_{23}\\,x+b_{23}\\,x^2$" w l lw 2,\
+y3(x) title "$y(x)=a_{31}\\,x+b_{31}\\,x^2$" w l lw 2

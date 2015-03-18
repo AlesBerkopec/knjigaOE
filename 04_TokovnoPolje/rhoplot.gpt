@@ -1,0 +1,25 @@
+reset
+set grid
+set key bottom at 0.8,4 spacing 1.5
+set samples 1000 
+set xrange [0:25]
+set yrange [0:2]
+
+set xlabel "$x$" offset 0,-1
+set ylabel "$y$" offset -1.5,0
+
+#set xtics 0,0.5,2 offset 0,-0.2
+#set ytics -1,1,5
+
+#set term tikz mono 
+#set output "rho.tikz"
+
+#y(x)=1-exp(-x)-2*x+x**3;
+
+set style fill solid 
+set object 1 circle at 3.295000,0.065574 size 0.3 fc rgb "black"
+set object 2 circle at 9.175000,0.290984 size 0.3 fc rgb "black"
+set object 3 circle at 20.500000,1.348361 size 0.3 fc rgb "black"
+set object 4 circle at 0,0 size 0.3 fc rgb "black"
+
+plot sqrt(-1) title "" w l lw 4

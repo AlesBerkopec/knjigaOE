@@ -1,0 +1,25 @@
+reset
+set grid
+set key right bottom spacing 2.5
+set format x "$%.1f$"
+set format y "$%.3f$"
+#set yrange [-0.01:0.01]
+set xrange [0:3]
+set samples 1000
+
+set xlabel "$s=t/t_0$" offset 0,-1
+set xtics 0,0.5,4 offset 0,-0.5
+
+a=100.0;
+b=50.0;
+r=20.0;
+om0=sqrt(r*(1+a)/(1+b));
+beta=0.5*(1+a+b+r)/(1+b);
+om=sqrt(om0**2-beta**2);
+fx(s)=a/(1+a)+b*exp(-beta*s)/(om*(1+a)*(1+b))*(om*cos(om*s)+(1-beta)*sin(om*s));
+fy(s)=1/(1+a)-b*exp(-beta*s)/(om*(1+a)*(1+b))*sin(om*s);
+fz(s)=exp(-beta*s)/(om*(1+a)*(1+b))*(om*cos(om*s)+(1+a-beta)*sin(om*s));
+
+#set output 'b-om0_x.tikz';set term tikz mono;
+
+plot fx(x) title "$x$" w l lw 4

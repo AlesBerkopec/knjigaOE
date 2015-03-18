@@ -1,0 +1,55 @@
+#echo "[B,F]=xyI2BF('$1.dat');" | octave -q 
+#gnuplot -persist $1BF.gpt 
+#display $1BF. png &
+
+#linija
+#nk=15;
+#echo "n=$nk;l=2;fndat=strcat('line',num2str(n),'.dat'); [xx,yy]=xxyyline(l,n); 
+#dumpxyI(fndat,xx,yy,1*ones(1,n)); [B,F]=xyI2BF(fndat);" | octave -q 
+#fn='line'$nk'BF'; 
+#gnuplot -persist $fn.gpt 
+#display $fn. png &
+
+#kroznica z imenicnimi smermi toka
+#nk=20;
+#echo "n=$nk;r=1;fndat=strcat('circo',num2str(n),'.dat');[xx,yy]=xxyycirc(r,n);
+#dumpxyI(fndat,xx,yy,(-1).^[0:n-1]);
+#[B,F]=xyI2BF(fndat);" | octave -q 
+#fn='circo'$nk'BF';
+#gnuplot -persist $fn.gpt 
+#display $fn. png &
+
+#kroznica
+nk=10;
+echo "n=$nk;r=1; fndat=strcat('circ',num2str(n),'.dat'); 
+[xx,yy]=xxyycirc(r,n); dumpxyI(fndat,xx,yy,1*ones(1,n)); 
+[B,F]=xyI2BF(fndat);" | octave -q 
+fn='circ'$nk'BF'
+gnuplot -persist $fn.gpt 
+display $fn. png &
+
+
+#kroznica na pol
+#nk=10;
+#echo "n=$nk;r=1;
+#fndat=strcat('circ2pol',num2str(n),'.dat');[xx,yy]=xxyycirc(r,n); 
+#dumpxyI(fndat,xx,yy,[ones(1,n/2),-ones(1,n-n/2)]);
+#[B,F]=xyI2BF(fndat);" | octave -q 
+#fn='circ2pol'$nk'BF'
+#gnuplot -persist $fn.gpt 
+#display $fn. png &
+
+#skupina kroznic
+#nk=10;nb=4;
+#echo "n=$nk;nr=$nb;rr=linspace(0,1,nr);nn=n*rr+1; fndat=strcat('circs',num2str(n),'.dat'); [xx,yy]=xxyycircs(rr,nn); dumpxyI(fndat,xx,yy,1*ones(1,length(xx))); [B,F]=xyI2BF(fndat);" | octave -q 
+#fn='circs'$nk'BF'; 
+#gnuplot -persist $fn.gpt 
+#display $fn. png &
+
+
+#kvadrat (stranice)
+#nk=10;
+#echo "n=$nk;a=1; fndat=strcat('square',num2str(n),'.dat'); [xx,yy]=xxyysquare(a,n); dumpxyI(fndat,xx,yy,1*ones(1,length(xx))); [B,F]=xyI2BF(fndat);" | octave -q 
+#fn='square'$nk'BF'
+#gnuplot -persist $fn.gpt 
+#display $fn. png &

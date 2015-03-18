@@ -1,0 +1,43 @@
+
+disp('----------------------------------');
+disp('naloga 1 (odprto stikalo):');
+ZA=10;
+ZB=2*I;
+ZC=-5*I;
+[Vz,UU,II]=solve3z([ZA,ZB,ZC],230,1); 
+Vz,ppolar(Vz,'V')
+UU
+ppolar(UU,'V'); 
+II
+ppolar(II,'A');
+disp('naloga 1 (zaprto stikalo):');
+ZA=10;
+ZB=2*I;
+ZC=-5*I;
+Z0=0.0;
+[Vz,UU,II]=solve3z([ZA,ZB,ZC,Z0],230,1); 
+Vz,ppolar(Vz,'V')
+UU
+ppolar(UU,'V'); 
+II,
+ppolar(II,'A');
+sum(II(1:3))
+ppolar(sum(II(1:3)),'A')
+disp('----------------------------------');
+
+disp('');
+disp('----------------------------------');
+disp('naloga 2 (trije R,L):');
+ZA=80+I*10;
+ZB=4+I*20;
+ZC=50+I*5;
+[Vz,UU,II]=solve3z([ZA,ZB,ZC],230,-1); 
+disp('Vz:');
+Vz,ppolar(Vz,'V')
+disp('UU:');
+UU
+ppolar(UU,'V'); 
+disp('II:');
+II
+ppolar(II,'A');
+disp('----------------------------------');

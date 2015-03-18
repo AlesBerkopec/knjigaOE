@@ -1,0 +1,26 @@
+reset
+set grid
+set key right bottom spacing 2.5
+set format x "$%.1f$"
+set format y "$%.2f$"
+set xrange [0:6]
+set samples 1000
+
+set xlabel "$s=t/t_0$" offset 0,-1
+set xtics 0,1,40 offset 0,-0.5
+
+a=5.0;
+b=5.0;
+r=1.0;
+om0=sqrt(r*(1+a)/(1+b));
+beta=0.5*(1+a+b+r)/(1+b);
+om=sqrt(om0**2-beta**2);
+fx(s)=a/(1+a)+b*exp(-beta*s)/((1+a)*(1+b))*(1+s*(1-beta));
+fy(s)=1/(1+a)-b*s*exp(-beta*s)/((1+a)*(1+b));
+fz(s)=exp(-beta*s)/((1+a)*(1+b))*(1+s*(1+a-beta));
+
+set yrange [-0.2:0.2]
+
+#set output 'b=om0_yzu.tikz';set term tikz mono;
+
+plot fy(x) title "$y$" w l lw 4, 1-fx(x)-fz(x) title "$u_C/\\Ug{}$" w l lw 4, fz(x) title "$z$" w l lw 4, 1-fx(x)-fy(x) title "$u_L/\\Ug{}$" w l lw 4

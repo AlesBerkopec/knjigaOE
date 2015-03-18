@@ -1,0 +1,1 @@
+echo "[Cn,QQ]=PN_1_140_direkt;Cn,QQ" | octave -q

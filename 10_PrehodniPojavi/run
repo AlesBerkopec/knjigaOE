@@ -1,0 +1,4 @@
+gnuplot -p b=om0.gpt
+gnuplot -p b-om0.gpt
+gnuplot -p b+om0.gpt
+

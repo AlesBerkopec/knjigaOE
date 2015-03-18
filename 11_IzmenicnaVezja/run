@@ -1,0 +1,5 @@
+
+echo "================ nals ================"
+octave -q nals.oct
+echo "================ PN3f ================"
+octave -q PN3f.oct
