@@ -7,5 +7,3 @@ datoteko z imenom ``run``. V vsaki od teh je nek nabor ukazov
 procedure v tisti mapi (npr. kaj so vhodni podatki ipd.). 
 Zagon datoteke ``run`` reši osnovno nalogo v vsaki mapi, 
 rezultat pa prikaže v grafični ali tekstovni obliki. 
-
-Delovanje je bilo preverjeno na računalnikih z OS linux.
