@@ -8,6 +8,6 @@ procedure v tisti mapi (npr. kaj so vhodni podatki ipd.).
 
 Zagon datoteke ``run`` reši osnovno nalogo v vsaki mapi, 
 rezultat pa prikaže v grafični ali tekstovni obliki. Delovanje je
-bilo preverjeno na linux distribuciji Ubuntu 14.04.2. Za uspešen zagon
+bilo preizkušeno na linux distribuciji Ubuntu 14.04.2. Za uspešen zagon
 si je predhodno potrebno priskrbeti delujoči verziji paketov
 ``octave`` (http://www.octave.org) in ``gnuplot`` (http://www.gnuplot.info).
