@@ -2,8 +2,13 @@
 
 \usepackage[slovene]{babel}
 \usepackage{a4wide}
+\usepackage{array}
+\usepackage{mathtools}
+\usepackage{accents}
 
-\renewcommand{\arraystretch}{1.5}
+\renewcommand{\j}{\ensuremath{\mathrm{j}}}
+\newcommand{\ubar}[1]{\ensuremath{\underaccent{\bar}{{#1}}}}
+\renewcommand{\arraystretch}{2.0}
 \newcommand{\napaka}[3]{
 #1 & {#2} & #3 \\ \hline}
 
@@ -29,6 +34,37 @@ q(\mathbf{r}^\prime)\,V(\mathbf{r}^\prime)\,\mathrm{d}{r^\prime}
 od premice do to"cke $\mathbf{r}^\prime$
 }{
 od premice do to"cke $\mathbf{r}-\mathbf{r}^\prime$
+}
+\napaka{159}{
+\ensuremath{\displaystyle{
+(\j4+\j5+8)\,\ubar{J}_1
+}}
+}{
+\ensuremath{\displaystyle{
+(\j4+\j5+8+7)\,\ubar{J}_1
+}}
+}
+\napaka{159}{
+\ensuremath{\displaystyle{
+\ubar{U}_\mathrm{g}=(8+\j7)\,\ubar{J}_1-(\j9+8)\,\ubar{J}_2
+}}
+}{
+\ensuremath{\displaystyle{
+\ubar{U}_\mathrm{g}=(15+\j7)\,\ubar{J}_1-(\j9+8)\,\ubar{J}_2
+}}
+}
+\napaka{159}{
+\ensuremath{\displaystyle{
+\begin{bmatrix*}[r]
+8+\j7&-8-\j9\\ -8-\j9&17+\j15\\
+\end{bmatrix*}
+}}
+}{
+\ensuremath{\displaystyle{
+\begin{bmatrix*}[r]
+15+\j7&-8-\j9\\ -8-\j9&17+\j15\\
+\end{bmatrix*}
+}}
 }
 \end{tabular}
 }
