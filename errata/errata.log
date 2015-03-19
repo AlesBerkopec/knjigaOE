@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.9.11)  19 MAR 2015 12:59
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.9.11)  19 MAR 2015 13:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -261,7 +261,7 @@ e
 Here is how much of TeX's memory you used:
  3128 strings out of 493304
  43838 string characters out of 6139871
- 115215 words of memory out of 5000000
+ 116215 words of memory out of 5000000
  6550 multiletter control sequences out of 15000+600000
  5322 words of font info for 20 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
@@ -276,7 +276,7 @@ e1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
 onts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
 /cmsy7.pfb>
-Output written on errata.pdf (1 page, 78965 bytes).
+Output written on errata.pdf (1 page, 79161 bytes).
 PDF statistics:
  44 PDF objects out of 1000 (max. 8388607)
  31 compressed objects within 1 object stream
