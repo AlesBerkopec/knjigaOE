@@ -3,7 +3,34 @@
 \usepackage[slovene]{babel}
 \usepackage{a4wide}
 
+\renewcommand{\arraystretch}{1.5}
+\newcommand{\napaka}[3]{
+#1 & {#2} & #3 \\ \hline}
+
 \begin{document}
 \centerline{\scshape Errata}
+
+\bigskip\noindent
+\centerline{
+\begin{tabular}{r||c|c}
+%\hline
+stran & namesto & mora biti \\
+\hline
+\napaka{34}{
+\ensuremath{\displaystyle{
+W_\mathrm{p}=\frac{1}{2}\,\int_{\cal{L}^\prime} 
+q(\mathbf{r}^\prime)\,V(\mathbf{r}^\prime)\,\mathrm{d}\mathbf{r}^\prime}}
+}{
+\ensuremath{\displaystyle{
+W_\mathrm{p}=\frac{1}{2}\,\int_{\cal{L}^\prime} 
+q(\mathbf{r}^\prime)\,V(\mathbf{r}^\prime)\,\mathrm{d}{r^\prime}
+}}}
+\napaka{71}{
+od premice do to"cke $\mathbf{r}^\prime$
+}{
+od premice do to"cke $\mathbf{r}-\mathbf{r}^\prime$
+}
+\end{tabular}
+}
 
 \end{document}
