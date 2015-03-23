@@ -10,12 +10,14 @@
 \newcommand{\ubar}[1]{\ensuremath{\underaccent{\bar}{{#1}}}}
 \renewcommand{\arraystretch}{2.0}
 \newcommand{\napaka}[3]{
-#1 & {#2} & #3 \\ \hline}
+#1 & {#2} & #3 \\}
 
 \begin{document}
 \centerline{\scshape Errata}
 
 \bigskip\noindent
+\bigskip\noindent
+
 \centerline{
 \begin{tabular}{r||c|c}
 %\hline
@@ -30,12 +32,15 @@ q(\mathbf{r}^\prime)\,V(\mathbf{r}^\prime)\,\mathrm{d}\mathbf{r}^\prime}}
 W_\mathrm{p}=\frac{1}{2}\,\int_{\cal{L}^\prime} 
 q(\mathbf{r}^\prime)\,V(\mathbf{r}^\prime)\,\mathrm{d}{r^\prime}
 }}}
+\hline
 \napaka{71}{
 od premice do to"cke $\mathbf{r}^\prime$
 }{
 od premice do to"cke $\mathbf{r}-\mathbf{r}^\prime$
 }
+\hline
 \napaka{147}{kjerkoli"cine}{kjer koli"cine}
+\hline
 \napaka{159}{
 \ensuremath{\displaystyle{
 (\j4+\j5+8)\,\ubar{J}_1
@@ -45,7 +50,7 @@ od premice do to"cke $\mathbf{r}-\mathbf{r}^\prime$
 (\j4+\j5+8+7)\,\ubar{J}_1
 }}
 }
-\napaka{159}{
+\napaka{}{
 \ensuremath{\displaystyle{
 \ubar{U}_\mathrm{g}=(8+\j7)\,\ubar{J}_1-(\j9+8)\,\ubar{J}_2
 }}
@@ -54,7 +59,7 @@ od premice do to"cke $\mathbf{r}-\mathbf{r}^\prime$
 \ubar{U}_\mathrm{g}=(15+\j7)\,\ubar{J}_1-(\j9+8)\,\ubar{J}_2
 }}
 }
-\napaka{159}{
+\napaka{}{
 \ensuremath{\displaystyle{
 \begin{bmatrix*}[r]
 8+\j7&-8-\j9\\ -8-\j9&17+\j15\\
@@ -67,6 +72,7 @@ od premice do to"cke $\mathbf{r}-\mathbf{r}^\prime$
 \end{bmatrix*}
 }}
 }
+\hline
 \end{tabular}
 }
 
